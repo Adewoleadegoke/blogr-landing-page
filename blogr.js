@@ -21,7 +21,19 @@ let dropdownWord = document.querySelectorAll('.dropdown-word');
 dropdownWord.forEach(function (dropWord) {
     dropWord.addEventListener('click', function () {
     
+    
       let dropdownContainer = document.querySelectorAll('.dropdown');
+         
+      //code for interactivity on dropdown
+     //   dropdownContainer.forEach(function (dropContainer) {
+            //dropContainer.classList.add('hidden');
+            
+   dropdownContainer.forEach(function (dropContainer) {
+       dropContainer.classList.add('hidden');
+   });
+   
+   
+   
       let dropdownProductWord = document.getElementById('dropdown-product');
       var dropdownCompanyWord = document.getElementById('dropdown-company');
       var dropdownConnectWord = document.getElementById('dropdown-connect');
@@ -29,19 +41,22 @@ dropdownWord.forEach(function (dropWord) {
       var dropdownProductContainer = document.getElementById('dropdown-product-container');      
        var dropdownCompanyContainer = document.getElementById('dropdown-company-container');
       var dropdownConnectContainer = document.getElementById('dropdown-connect-container');
-         
-      //code for interactivity on dropdown
-     //   dropdownContainer.forEach(function (dropContainer) {
-            //dropContainer.classList.add('hidden');
             
-            if(dropdownProductWord) {
-                dropdownProductContainer.classList.toggle('hidden');
-            }else if (dropdownCompanyWord){
-                dropdownCompanyContainer.classList.toggle('hidden')
-            }
-        
-    })
-})
+  dropdownProductWord.addEventListener('click', function () {
+      dropdownProductContainer.classList.toggle('hidden');
+  })
+                
+   dropdownCompanyWord.addEventListener('click', function () {
+       dropdownCompanyContainer.classList.toggle('hidden');
+   })
+   dropdownConnectWord.addEventListener('click', function () {
+       dropdownConnectContainer.classList.toggle('hidden');
+   })
+  })
+ })
+ 
+            
+     
 
 //Code for Nav on 1000px screen size 
 function adjustNavOnDesktop() {

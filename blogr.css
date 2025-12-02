@@ -377,8 +377,23 @@ hr {
         font-family: 'Ubuntu', sans-serif;   
         font-weight: 400;
         color: hsl(237, 17%, 21%);
+        font-size: 14px;
     }
-   
+    .dropdown a:hover {
+        font-weight: 500;
+        font-size: 15px;
+    }
+    /* nav end */
+    .start-button:hover {
+        color: white;
+        background: hsl(0, 100%, 100%, 0.2);
+        border: none;
+    } 
+    .learn-button:hover {
+        background: white;
+        color: hsl(355, 100%, 74%);
+    }
+           
     /* First desktop styler */
     .desktop-styler-first {
         display: flex;
